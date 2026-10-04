@@ -18,7 +18,8 @@
 - [ ] Unsupervised Learning — unlabeled data, clustering, dimensionality reduction
 - [ ] Reinforcement Learning — rewards, trial and error, agents
 - [ ] Semi-supervised & Self-supervised Learning
-- [ ] ML algorithms: K-Means (clustering), KNN (classification), Decision Trees, SVMs
+- [ ] ML algorithms: K-Means (clustering), KNN (classification), Decision Trees, SVMs, XGBoost
+- [ ] AI Components: Data Layer, ML Framework, Model, Application
 
 **AWS Resources:**
 - https://aws.amazon.com/what-is/machine-learning/
@@ -52,11 +53,18 @@
 
 ### Day 6: ML Metrics & Evaluation
 - [ ] Classification metrics: Precision, Recall, F1-Score, Accuracy
-- [ ] Regression metrics: MAE, RMSE, R-squared
-- [ ] Confusion matrix
+- [ ] Regression metrics: MAE, MAPE, RMSE, R-squared
+- [ ] Confusion matrix — True Positive, False Positive, True Negative, False Negative
+- [ ] AUC-ROC — Area Under the Curve
 - [ ] Multi-class vs Multi-label classification
-- [ ] Runtime efficiency: Average Response Time, Data Throughput
-- [ ] NLP vs Computer Vision — what each handles
+- [ ] ML Inferencing — Real-time vs Batch
+- [ ] Inferencing at the Edge — SLM vs LLM trade-offs
+- [ ] Hyperparameter Tuning — Learning rate, Batch size, Epochs, Regularization
+- [ ] Exploratory Data Analysis — Correlation Matrix
+- [ ] When ML is NOT appropriate — deterministic problems
+- [ ] Unsupervised Learning extras: Association Rule Learning (Market Basket, Apriori), Anomaly Detection (Isolation Forest)
+- [ ] Semi-supervised Learning — pseudo-labeling
+- [ ] Self-supervised Learning — pretext tasks, downstream tasks
 
 **AWS Resources:**
 - https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html
@@ -79,6 +87,10 @@
 - [ ] GPT — Generative Pre-trained Transformer (text generation, text-to-SQL)
 - [ ] Stable Diffusion — image generation from text
 - [ ] How generative AI creates content (learns patterns, generates new data)
+- [ ] Tokenization — how text is broken into tokens
+- [ ] Context Window — input size limits for LLMs
+- [ ] Embeddings — semantic similarity and vector representations
+- [ ] Multi-modal models — text, image, audio inputs/outputs
 
 **AWS Resources:**
 - https://aws.amazon.com/what-is/large-language-model/
@@ -95,6 +107,10 @@
 - [ ] Chain-of-thought prompting — step-by-step reasoning
 - [ ] Dynamic prompt engineering — adjusting prompts based on context
 - [ ] Negative prompting — specifying what to avoid
+- [ ] System Prompts — setting model behavior and persona
+- [ ] Prompt Templates — reusable structured prompts
+- [ ] Prompt Injection attacks — how they work and how to protect against them
+- [ ] Prompt Latency — factors affecting response time
 
 **AWS Resources:**
 - https://docs.aws.amazon.com/bedrock/latest/userguide/inference-parameters.html
@@ -109,6 +125,11 @@
 - [ ] RAG vs Agents in Amazon Bedrock
 - [ ] Model evaluation: Automatic (BERT Score, F1) vs Human (qualitative)
 - [ ] When to use which: RAG for changing data, fine-tuning for domain expertise
+- [ ] Supervised Fine-Tuning vs Reinforcement Fine-Tuning
+- [ ] Distillation — teacher-student model approach
+- [ ] Cost order: Prompt Engineering < RAG < Instruction Fine-tuning < Domain Adaptation
+- [ ] Automated metrics: ROUGE, BLEU, BERTScore, Perplexity
+- [ ] Business metrics: User Satisfaction, ARPU, Conversion Rate, Efficiency
 
 **AWS Resources:**
 - https://aws.amazon.com/blogs/machine-learning/best-practices-to-build-generative-ai-applications-on-aws/
@@ -132,8 +153,13 @@
 - [ ] Watermark detection — identifies Titan Image Generator output
 - [ ] Knowledge Bases — RAG implementation
 - [ ] Agents — orchestration through cyclical input/output
-- [ ] Bedrock inference: On-demand vs Batch (50% cheaper)
+- [ ] Bedrock inference: On-demand vs Batch (50% cheaper) vs Provisioned Throughput
 - [ ] Amazon S3 as dataset storage for Bedrock
+- [ ] Bedrock & CloudWatch — Model Invocation Logging, Metrics
+- [ ] RAG Vector Databases — OpenSearch, Aurora, Neptune Analytics, S3 Vectors
+- [ ] RAG Data Sources — S3, Confluence, SharePoint, Salesforce, Web pages
+- [ ] Amazon Nova models — Premier, Pro, Lite, Micro, Canvas, Reel, Sonic
+- [ ] Bedrock cost savings strategies
 
 **AWS Resources:**
 - https://aws.amazon.com/bedrock/
@@ -152,6 +178,11 @@
 - [ ] **SageMaker Model Monitor** — production model quality tracking
 - [ ] **SageMaker Role Manager** — IAM role management for ML
 - [ ] **SageMaker Automatic Model Tuning** — auto hyperparameter optimization (no mandatory configs)
+- [ ] **SageMaker Model Registry** — versioning and managing trained models
+- [ ] **SageMaker Pipelines** — CI/CD for ML, step types
+- [ ] **MLFlow on Amazon SageMaker** — experiment tracking
+- [ ] **SageMaker Network Isolation** — securing training jobs
+- [ ] **SageMaker DeepAR** — time-series forecasting algorithm
 - [ ] SageMaker deployment types: Real-time, Serverless, Asynchronous, Batch Transform
 
 **AWS Resources:**
@@ -159,10 +190,15 @@
 - https://aws.amazon.com/sagemaker/ml-governance/
 
 ### Day 19-20: Amazon Q Family & Other AI Services
-- [ ] **Amazon Q Business** — enterprise AI assistant (powered by Bedrock), guardrails, topic controls
-- [ ] **Amazon Q Developer** — code suggestions, security scanning, upgrades (IDEs + Console)
-- [ ] **Amazon Q in QuickSight** — natural language BI dashboards
-- [ ] **Amazon Q in Connect** — contact center agent assistance
+- [ ] **Amazon Quick** (successor to Amazon Q Business) — Quick Index, Quick Research, Quick Flows, Quick Automate, Spaces
+- [ ] **Amazon Quick + IAM Identity Center** — access control
+- [ ] **Amazon Quick Integrations** — Knowledge Bases, Actions, MCP/OpenAPI
+- [ ] **Amazon Q Developer** — code suggestions, security scanning, upgrades, bill analysis (IDEs + Console + CLI)
+- [ ] **Amazon Q for QuickSight** — natural language BI dashboards
+- [ ] **Amazon Q for EC2** — instance selection assistance
+- [ ] **Amazon Q for AWS Chatbot** — Slack/Teams integration
+- [ ] **Amazon Q for Glue** — data integration assistance
+- [ ] **PartyRock** — GenAI app-building playground (powered by Bedrock)
 - [ ] **Amazon Comprehend** — NLP, sentiment, entities, PII redaction
 - [ ] **Amazon Comprehend Medical** — clinical text, HIPAA eligible, medical terminologies
 - [ ] **Amazon Rekognition** — image/video analysis, text in images (limited to 100 words)
@@ -176,7 +212,15 @@
 - [ ] **Amazon Kendra** — enterprise search
 - [ ] **Amazon Connect** — cloud contact center
 - [ ] **Amazon A2I** — human review of ML predictions
+- [ ] **Amazon Mechanical Turk** — crowdsourcing for human intelligence tasks
+- [ ] **Amazon Transcribe Medical** — HIPAA-eligible medical speech-to-text
+- [ ] **Amazon Comprehend Medical** — PHI detection in clinical text
+- [ ] **AWS HealthScribe** — clinical note generation
 - [ ] **AWS DeepRacer** — reinforcement learning with autonomous race car
+- [ ] **Amazon EC2 GPU instances** — hardware for AI workloads
+- [ ] **AWS Trainium** — custom chip for ML training (25% more energy efficient)
+- [ ] **AWS Inferentia** — custom chip for ML inference (cost effective)
+- [ ] **AWS Lambda** — serverless compute for AI pipelines
 
 **AWS Resources:**
 - https://aws.amazon.com/q/
@@ -203,8 +247,15 @@
 - [ ] RLHF — Reinforcement Learning from Human Feedback
 - [ ] Amazon A2I — human review workflows
 - [ ] Human evaluation vs Automated evaluation
+- [ ] Core dimensions of responsible AI — Fairness, Explainability, Privacy, Transparency, Veracity, Governance, Safety, Controllability
+- [ ] Interpretability trade-offs — model interpretability vs performance
+- [ ] High interpretability models — Decision Trees, Partial Dependence Plots (PDP)
+- [ ] Human-Centered Design (HCD) for Explainable AI
+- [ ] Toxicity detection and prevention
+- [ ] Plagiarism and Cheating risks with GenAI
+- [ ] Prompt misuses — Poisoning, Hijacking/Injection, Exposure, Prompt Leaking, Jailbreaking
 - [ ] Best practices: guardrails, transparency, continuous monitoring
-- [ ] GenAI Security Scoping Matrix — risk management discipline
+- [ ] GenAI Security Scoping Matrix — 5 scopes of risk management
 
 **AWS Resources:**
 - https://aws.amazon.com/machine-learning/responsible-ai/
@@ -224,9 +275,18 @@
 - [ ] Threat detection vs Vulnerability management
 - [ ] Data lineage — tracking data flow for compliance
 - [ ] SageMaker governance tools: Role Manager + Model Cards + Model Dashboard
+- [ ] AWS Compliance frameworks — NIST, ENISA, ISO, SOC, HIPAA, GDPR, PCI DSS
+- [ ] AWS Tools for Governance — Config, Artifact, Inspector, CloudTrail, Audit Manager, Trusted Advisor
+- [ ] Governance strategies — Policies, Review Cadence, Transparency Standards, Team Training
+- [ ] Data Governance — Lifecycles, Logging, Residency, Monitoring, Analysis, Retention
+- [ ] Data Lineage — Source Citation, Documenting Data Origins, Cataloging
+- [ ] Secure Data Engineering — Data Quality, Privacy-Enhancing Technologies, Access Control, Data Integrity
+- [ ] MLOps — Version control, Automation, CI/CD, Continuous Retraining/Monitoring
 - [ ] GenAI Security Scoping Matrix — building from scratch = max security ownership
-- [ ] Hybrid, Cloud, and Private deployment models
-- [ ] Regional vs Global AWS services
+- [ ] VPC for ML — deploying SageMaker/Bedrock models in VPC, PrivateLink
+- [ ] AWS Macie — PII detection in S3
+- [ ] Bedrock accessing encrypted S3 — IAM Roles, KMS Key configuration
+- [ ] CloudTrail for Bedrock — analyzing access patterns
 
 **AWS Resources:**
 - https://aws.amazon.com/compliance/shared-responsibility-model/
@@ -278,17 +338,21 @@
 
 ---
 
-## High-Frequency Exam Topics (based on 260 practice questions)
+## High-Frequency Exam Topics (based on 260 practice questions + slide coverage)
 
 These topics appeared most frequently across all practice tests:
 
-1. **SageMaker sub-services** — know every one and its specific purpose
-2. **Amazon Bedrock** — customization, privacy, guardrails, inference types
+1. **SageMaker sub-services** — know every one and its specific purpose (Clarify, Ground Truth, Feature Store, Model Cards, Pipelines, etc.)
+2. **Amazon Bedrock** — customization, privacy, guardrails, knowledge bases, agents, inference types, Amazon Nova models
 3. **Inference parameters** — Temperature, Top K, Top P, Stop sequences
 4. **ML types** — Supervised vs Unsupervised vs RL vs Deep Learning
 5. **Overfitting/Underfitting** — bias/variance relationship
-6. **RAG vs Fine-tuning vs Prompt Engineering** — when to use each
-7. **Amazon Q variants** — Business, Developer, QuickSight, Connect
-8. **AI security attacks** — hijacking, jailbreaking, prompt injection, exposure
-9. **AWS AI services** — Comprehend, Rekognition, Textract, Transcribe, Polly, Lex
+6. **RAG vs Fine-tuning vs Prompt Engineering** — when to use each, cost order
+7. **Amazon Quick / Q variants** — Quick, Developer, QuickSight, Glue, EC2
+8. **AI security attacks** — hijacking, jailbreaking, prompt injection, exposure, poisoning, prompt leaking
+9. **AWS AI services** — Comprehend, Rekognition, Textract, Transcribe, Polly, Lex, Personalize, Kendra
 10. **Shared Responsibility Model** — what AWS vs customer manages
+11. **GenAI Security Scoping Matrix** — 5 scopes of responsibility
+12. **AWS custom AI chips** — Trainium (training) vs Inferentia (inference)
+13. **Evaluation metrics** — ROUGE, BLEU, BERTScore, Perplexity + business metrics
+14. **MLOps & Governance** — CI/CD for ML, data lineage, compliance frameworks
